@@ -8,7 +8,7 @@ class Database {
     // Konfigurasi koneksi — sesuaikan dengan server Anda
     private $host     = 'localhost';
     private $db_name  = 'ojokerro_lautanlembardb';
-    private $username = 'ojokerro_lautanlembar';
+    private $username = 'lautanlembar';
     private $password = 'LautanLembar123';
     private $charset  = 'utf8mb4';
 
