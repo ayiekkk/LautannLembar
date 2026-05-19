@@ -7,7 +7,8 @@
 require_once __DIR__ . '/../config/Database.php';
 
 class Buku {
-    private PDO $db;
+    /** @var PDO|\mysqli|null */
+    private $db;
     private string $table = 'buku';
 
     public function __construct() {

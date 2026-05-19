@@ -7,7 +7,7 @@
 require_once __DIR__ . '/../config/Database.php';
 
 class User {
-    private PDO $db;
+    private ?mysqli $db;
 
     public function __construct() {
         $database = new Database();
@@ -19,11 +19,28 @@ class User {
      * Digunakan saat proses login
      */
     public function findByUsername(string $username): array|false {
+        if ($this->db === null) {
+            return false;
+        }
+
         $stmt = $this->db->prepare(
             "SELECT id, nama, username, password, role FROM users WHERE username = ? LIMIT 1"
         );
-        $stmt->execute([$username]);
-        return $stmt->fetch(); // Mengembalikan array atau false jika tidak ditemukan
+        if ($stmt === false) {
+            return false;
+        }
+
+        $stmt->bind_param('s', $username);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+
+        if ($result === false) {
+            return false;
+        }
+
+        $data = $result->fetch_assoc();
+        return $data ?? false;
     }
 
     /**
