@@ -6,7 +6,7 @@ class Database{
         $this->connection = null;
         try{
             // mysqli(namaserver, username_database, password_database, nama_database)
-            $this->connection = new mysqli("127.0.0.1", "ojokerro_Lautan", "Lautan1234567", "ojokerro_lautanlembardb");
+            $this->connection = new mysqli("127.0.0.1", "ojokerro_Lautan", "Lautan1234567", "ojokerro_lautandb");
 
             if($this->connection->connect_error){
                 throw new Exception($this->connection->connect_error);
