@@ -3,8 +3,6 @@
 -- Step 2: Jalankan SQL ini di phpMyAdmin atau MySQL CLI
 -- ============================================================
 
-
-
 -- 2. Tabel users (admin & user biasa)
 CREATE TABLE IF NOT EXISTS users (
     id       INT AUTO_INCREMENT PRIMARY KEY,
