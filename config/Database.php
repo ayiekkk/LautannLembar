@@ -9,7 +9,7 @@ class Database {
     private $host     = 'localhost';
     private $db_name  = 'ojokerro_lautanlembardb';
     private $username = 'ojokerro_lautanlembar';
-    private $password = 'PeyikNida123';
+    private $password = 'LautanLembar123';
     private $charset  = 'utf8mb4';
 
     private $pdo = null;
