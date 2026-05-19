@@ -3,12 +3,7 @@
 -- Step 2: Jalankan SQL ini di phpMyAdmin atau MySQL CLI
 -- ============================================================
 
--- 1. Buat database
-CREATE DATABASE IF NOT EXISTS toko_buku
-    CHARACTER SET utf8mb4
-    COLLATE utf8mb4_unicode_ci;
 
-USE toko_buku;
 
 -- 2. Tabel users (admin & user biasa)
 CREATE TABLE IF NOT EXISTS users (
